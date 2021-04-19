@@ -15,9 +15,15 @@ variables:
   value: <keyvault>
 
 steps:
+- task: AzureKeyVault@1
+  inputs:
+    azureSubscription: '無料試用版 (74559d77-0259-4dab-8b9c-a1b6c91c85bd)'
+    KeyVaultName: 'DevOpsTest8225'
+    SecretsFilter: '*'
+    RunAsPreJob: false
 - task: CmdLine@2
   inputs:
-    script: 'echo $(test)'
+    script: 'echo $(test) > secret.txt' 
 - task: UseDotNet@2
   displayName: 'Use .NET Core SDK $(dotnetSdkVersion)'
   inputs:
