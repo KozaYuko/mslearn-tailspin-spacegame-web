@@ -11,6 +11,8 @@ variables:
   wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
   dotnetSdkVersion: '3.1.300'
   group: ftppass
+  name: test
+  value: <keyvault>
 
 steps:
 - task: CmdLine@2
