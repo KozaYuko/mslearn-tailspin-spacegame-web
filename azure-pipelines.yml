@@ -1,3 +1,4 @@
+### YamlMime:Yaml
 trigger:
 - '*'
 pool:
@@ -43,6 +44,7 @@ steps:
     publishWebProjects: false
     arguments: --no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)
     zipAfterPublish: true
+
 - task: WhiteSource Bolt@21
   displayName: Run WhiteSource Bolt
 - task: PublishBuildArtifacts@1
