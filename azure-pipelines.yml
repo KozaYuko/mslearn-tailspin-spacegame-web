@@ -15,7 +15,7 @@ variables:
 steps:
 - task: CmdLine@2
   inputs:
-    script: 'echo $(var1)'
+    script: 'echo $(test)'
 - task: UseDotNet@2
   displayName: 'Use .NET Core SDK $(dotnetSdkVersion)'
   inputs:
